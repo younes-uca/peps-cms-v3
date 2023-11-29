@@ -1,0 +1,31 @@
+{
+    "code": "#string",
+    "buyingFrame": "#string",
+    "active": "#bool",
+    "hasOnlineVersion": "#bool",
+    "hasSection": "#bool",
+    "label": "#string",
+    "title": "#string",
+    "type": {"id": "#number"},
+    "name": "#string",
+    "productCode": "#string",
+    "slots": [
+      {
+      size of example.jsonFakeDataElements  0
+      },
+      {
+      size of example.jsonFakeDataElements  0
+      },
+      {
+      size of example.jsonFakeDataElements  0
+      }
+    ]
+}
+
+
+
+
+
+
+
+

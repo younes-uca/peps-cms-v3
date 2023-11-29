@@ -1,0 +1,270 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /slots:
+    get:
+      summary: List all slots
+      operationId: listSlots
+      tags:
+        - slots
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of slots
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Slots'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a slot
+      operationId: createSlots
+      tags:
+        - slots
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /slots/{slotId}:
+    get:
+      summary: Info for a specific slot
+      operationId: showSlotById
+      tags:
+        - slots
+      parameters:
+        - name: slotId
+          in: path
+          required: true
+          description: The id of the slot to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Slots'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /containers:
+    get:
+      summary: List all containers
+      operationId: listContainers
+      tags:
+        - containers
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of containers
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Containers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a container
+      operationId: createContainers
+      tags:
+        - containers
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /containers/{containerId}:
+    get:
+      summary: Info for a specific container
+      operationId: showContainerById
+      tags:
+        - containers
+      parameters:
+        - name: containerId
+          in: path
+          required: true
+          description: The id of the container to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Containers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /containerTypes:
+    get:
+      summary: List all containerTypes
+      operationId: listContainerTypes
+      tags:
+        - containerTypes
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of containerTypes
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ContainerTypes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a containerType
+      operationId: createContainerTypes
+      tags:
+        - containerTypes
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /containerTypes/{containerTypeId}:
+    get:
+      summary: Info for a specific containerType
+      operationId: showContainerTypeById
+      tags:
+        - containerTypes
+      parameters:
+        - name: containerTypeId
+          in: path
+          required: true
+          description: The id of the containerType to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ContainerTypes'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  Slot:
+    type: "object"
+    required:
+      - id
+      - type
+    properties:
+      id:
+        type: int
+      type:
+        type: string
+  Slots:
+    type: array
+    items:
+      $ref: '#/definitions/Slot'
+  Container:
+    type: "object"
+    required:
+      - id
+      - code
+      - buyingFrame
+      - active
+      - hasOnlineVersion
+      - hasSection
+      - label
+      - title
+      - name
+      - productCode
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      buyingFrame:
+        type: string
+      active:
+        type: boolean
+      hasOnlineVersion:
+        type: boolean
+      hasSection:
+        type: boolean
+      label:
+        type: string
+      title:
+        type: string
+      name:
+        type: string
+      productCode:
+        type: string
+  Containers:
+    type: array
+    items:
+      $ref: '#/definitions/Container'
+  ContainerType:
+    type: "object"
+    required:
+      - id
+      - libelle
+      - code
+    properties:
+      id:
+        type: int
+      libelle:
+        type: string
+      code:
+        type: string
+  ContainerTypes:
+    type: array
+    items:
+      $ref: '#/definitions/ContainerType'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string

@@ -1,0 +1,68 @@
+{
+    "from-to": "Elements from {first} to {last} (total {totalRecords})",
+    "new" : "New",
+    "search": "Search",
+    "export": "Export",
+    "validate": "Validate",
+    "search": "Seach...",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "next": "Next",
+    "yes": "Yes",
+    "no": "No",
+    "actions": "Actions",
+    "confirm": "Confirm",
+    "creation": "Creation",
+    "list": "List",
+
+
+    "slot":{
+        "type": "Type",
+        "container": "Container",
+        "containerPlaceHolder": "Select a Container",
+        "containerPlaceHolderFilter": "Search by Container",
+        "slot": "Slot",
+        "tabPan": "Slot",
+        "header": "Liste des slots",
+        "deleteSlotConfirmationMessage": "Are you sure you want to delete slot",
+        "deleteSlotsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "container":{
+        "code": "Code",
+        "buyingFrame": "Buying frame",
+        "active": "Active",
+        "hasOnlineVersion": "Has online version",
+        "hasSection": "Has section",
+        "label": "Label",
+        "title": "Title",
+        "type": "Type",
+        "typePlaceHolder": "Select a Type",
+        "typePlaceHolderFilter": "Search by Type",
+        "slots": "Slots",
+        "name": "Name",
+        "productCode": "Product code",
+        "container": "Container",
+        "tabPan": "Container",
+        "header": "Liste des containers",
+        "deleteContainerConfirmationMessage": "Are you sure you want to delete container",
+        "deleteContainersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "containerType":{
+        "libelle": "Libelle",
+        "code": "Code",
+        "containerType": "Container type",
+        "tabPan": "Container type",
+        "header": "Liste des container types",
+        "deleteContainerTypeConfirmationMessage": "Are you sure you want to delete container type",
+        "deleteContainerTypesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+

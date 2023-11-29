@@ -1,0 +1,71 @@
+{
+    "from-to": "Elements from {first} to {last} (total {totalRecords})",
+    "new" : "Nouveau",
+    "search": "Chercher",
+    "export": "Exporter",
+    "validate": "Validater",
+    "search": "Chercher...",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "save": "Sauvgarder",
+    "next": "Suivant",
+    "yes": "Oui",
+    "no": "Non",
+    "actions": "Actions",
+    "confirm": "Confirmer",
+    "creation": "Creation",
+    "list": "Liste",
+
+
+    "slot":{
+        "type": "Type",
+        "container": "Container",
+        "containerPlaceHolder": "Select a Container",
+        "containerPlaceHolderFilter": "Search by Container",
+        "slot": "Slot",
+        "tabPan": "Slot",
+        "header": "Liste des slots",
+        "deleteSlotConfirmationMessage": "Voulez vous vraiment supprimer slot",
+        "deleteSlotsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "container":{
+        "code": "Code",
+        "buyingFrame": "Buying frame",
+        "active": "Active",
+        "hasOnlineVersion": "Has online version",
+        "hasSection": "Has section",
+        "label": "Label",
+        "title": "Title",
+        "type": "Type",
+        "typePlaceHolder": "Select a Type",
+        "typePlaceHolderFilter": "Search by Type",
+        "slots": "Slots",
+        "name": "Name",
+        "productCode": "Product code",
+        "container": "Container",
+        "tabPan": "Container",
+        "header": "Liste des containers",
+        "deleteContainerConfirmationMessage": "Voulez vous vraiment supprimer container",
+        "deleteContainersConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "containerType":{
+        "libelle": "Libelle",
+        "code": "Code",
+        "containerType": "Container type",
+        "tabPan": "Container type",
+        "header": "Liste des container types",
+        "deleteContainerTypeConfirmationMessage": "Voulez vous vraiment supprimer container type",
+        "deleteContainerTypesConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+"appName": "GED"
+}
+
+
